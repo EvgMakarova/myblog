@@ -1,0 +1,145 @@
+* { margin: 0; padding: 0; outline:0; }
+
+body {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: Georgia, Arial, Helvetica, Sans-Serif;
+    color: #333;
+    background: url() repeat 0 0;
+}
+
+a { color: #ff0000; text-decoration: none; cursor:pointer; }
+a:hover { text-decoration: underline; }
+
+a img { border: 0; }
+
+input, textarea, select { font-family: Arial, Helvetica, sans-serif; font-size:12px; }
+textarea { overflow:auto; }
+
+.cl { display: block; height: 0; font-size: 0; line-height: 0; text-indent: -4000px; clear: both; }
+.notext { font-size: 0; line-height: 0; text-indent: -4000px; }
+
+.left, .alignleft { float: left; display: inline; }
+.right, .alignright { float: right; display: inline; }
+
+
+.shell { width: 980px; margin: 0 auto; }
+.border { border: 1px solid #e8e8e8; background: #fff; position: relative; }
+
+
+#navigation { height: 43px; border-top: 1px solid #dbdbdb; border-bottom: 1px solid #dbdbdb; }
+#navigation ul { list-style: none; }
+#navigation ul li { float: left; height: 43px; border-right: 1px solid #dbdbdb; font-size: 12px; line-height: 43px; font-weight: bold; text-transform: uppercase; }
+#navigation ul li a { float: left; height: 43px; color: #000; padding: 0 33px; }
+#navigation ul li a:hover, 
+#navigation ul li a.active { color: #ff0000; text-decoration: none; transform: scale(1.2); transition: transform.3s ease;}
+
+
+#main { width: 932px; padding: 37px 24px 17px 24px; }
+#main h3 { font-size: 12px; line-height: 15px; color: #000; text-transform: uppercase; border-bottom: 1px solid #dbdbdb; padding: 0 0 9px 0; }
+#main a.more:hover { text-decoration: none; }
+
+#content { width: 905px; }
+
+.highlight {  }
+.highlight h3 { margin: 0 0 9px 0; }
+.highlight p { padding: 0 0 11px 0; }
+.highlight img { margin: 4px 12px 0 12px; }
+
+.projects { padding: 10px 0 0 0; }
+.projects h3 { margin: 0 0 17px 0; }
+.projects .item { margin: 0 0 28px 0; border-width: 1px; border-color: #ff0000; border-style:solid;}
+.projects .image { width: 150px; height: 150px; border: 0px solid #dbdbdb; padding: 2px; margin: 0 20px 0 3px; }
+.projects .text { width: 600px; }
+.projects .text h4 { font-size: 18px; line-height: 15px; color: #ff0000; text-transform: uppercase; padding: 5px 0 5px 0; display: inline-block; position: relative;}
+.projects .text p { padding: 0 0 3px 0; }
+
+.btn-buy:hover { text-decoration: none; }
+
+.advertisement { padding: 0 0 13px 0; }
+.advertisement h3 { margin: 0 0 18px 0; }
+.advertisement .ads { padding: 0 15px 0 7px; }
+.advertisement .ad { margin: 0 0 18px 0; }
+
+
+
+#footer { font-family: Arial, sans-serif; font-size: 11px; line-height: 14px; color: #7f7f7f; padding: 18px 27px 20px 38px; }
+#footer a{ color: #7f7f7f; }
+.shine-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 10px 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ff0000;
+    transition: .2s ease-in-out;
+  }
+  .shine-button:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -8px;
+    left: -75px;
+    transform: skewX(-45deg);
+  }
+  .shine-button:hover {
+    background: #ff0000;
+    color: #fff;
+  }
+  .shine-button:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+  }
+  .decor {
+    position: relative;
+    max-width: 450px;
+    margin: 50px auto 0;
+    background: white;
+    border-radius: 30px;
+ }
+ .circle {
+    position: absolute;
+    bottom: 80px;
+    left: -55px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+ }
+ .form-inner {
+    padding: 50px;
+ }
+ .form-inner input, .form-inner textarea {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    background: #fae5e5;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+ }
+ .form-inner input[type="submit"] {
+    margin-top: 30px;
+    background: #f69a73;
+    border-bottom: 4px solid #d87d56;
+    color: white;
+    font-size: 14px;
+ }
+ .form-inner textarea {
+    resize: none;
+ }
+ .form-inner h3 {
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #707981;
+ }
