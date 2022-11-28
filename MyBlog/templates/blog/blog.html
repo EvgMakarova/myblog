@@ -33,8 +33,9 @@
 							</div>
 							<div class="text left">
 								<h4>{{post.title|upper}}</h4>
-								<p>{{post.descriptions}}</p>
+								{% filter truncatechars:30 %}<p>{{post.descriptions}}</p> {% endfilter %}  
 								<p>Автор:  {{post.author}}</p>
+								<a href="{% url 'post-detail' post.id %}" class="shine-button right">Читать</a>
 							</div>
 							<div class="cl">&nbsp;</div>
 						</div>
@@ -47,7 +48,7 @@
 			
 			<div class="cl">&nbsp;</div>
 		</div>
-		<a href="{% url 'add' %}" class="shine-button">Добавить статью</a>
+		{% if user.is_authenticated %}<a href="{% url 'add' %}" class="shine-button">Добавить статью</a>{% endif %}
 
 	</div>
 	

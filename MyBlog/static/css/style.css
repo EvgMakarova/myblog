@@ -35,9 +35,10 @@ textarea { overflow:auto; }
 #navigation ul li a.active { color: #ff0000; text-decoration: none; transform: scale(1.2); transition: transform.3s ease;}
 
 
-#main { width: 932px; padding: 37px 24px 17px 24px; }
+#main, #main_2 { width: 932px; padding: 37px 24px 17px 24px; }
 #main h3 { font-size: 12px; line-height: 15px; color: #000; text-transform: uppercase; border-bottom: 1px solid #dbdbdb; padding: 0 0 9px 0; }
-#main a.more:hover { text-decoration: none; }
+#main_2 h3 { font-size: 12px; line-height: 15px; color: #ff0000; text-transform: uppercase; border-bottom: 1px solid #dbdbdb; padding: 0 0 9px 0; }
+#main, #main_2 a.more:hover { text-decoration: none; }
 
 #content { width: 905px; }
 

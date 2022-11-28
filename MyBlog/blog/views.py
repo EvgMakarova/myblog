@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic.base import View
+from django.views.generic import DetailView, UpdateView, DeleteView
 from .models import Post
 from .forms import PostForm
 
@@ -9,14 +10,10 @@ class PostView(View):
         posts = Post.objects.all()[::-1]
         context = {
             'post_list': posts,
-            'name': 'Главная страница'
+            'name': 'Главная страница',
         }
         return render(request, 'blog/blog.html', context)
-    def indexX(request):
-        context ={
-            'name': 'imya'
-        }
-        return render(request, 'blog/post.html',context)
+
     def add(request):
         if request.method =="POST":
             form = PostForm(request.POST)
@@ -33,3 +30,18 @@ class PostView(View):
             'form': form
         }
         return render(request, 'blog/add.html', context)
+
+class PostDetailView(DetailView):
+    model = Post
+    template_name = 'blog/post.html'
+    context_obj_name = 'post'
+
+class PostUpdateView(UpdateView):
+    model = Post
+    template_name = 'blog/add.html'
+    fields = ['title', 'descriptions', 'author', 'date']
+
+class PostDeleteView(DeleteView):
+    model = Post
+    template_name = 'blog/post_delete.html'
+    success_url= '/'

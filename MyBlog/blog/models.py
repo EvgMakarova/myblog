@@ -11,6 +11,9 @@ class Post(models.Model):
     def __str__(self):
         return f'{self.title}, {self.author}'
 
+    def get_absolute_url(self):
+        return f'/{self.id}'
+
     class Meta:
         verbose_name = 'Запись'
         verbose_name_plural = 'Записи'

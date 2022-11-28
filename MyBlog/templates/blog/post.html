@@ -1,7 +1,12 @@
 {% extends 'blog/layout_post.html' %}
 
-{% block title %}{{name}}{% endblock %}
-<main>
+{% block title %}{{post.title}}{% endblock %}
     {% block content %}
+        <h3 id="detail">{{post.author}} — {{post.title}}</h3>
+        <p>{{post.descriptions}}</p>
+        <p>{{post.date}}</p>
+        {% if user.is_superuser %}
+        <a href="{% url 'post-update' post.id %}" class="shine-button">Редактировать</a>
+        <a href="{% url 'post-delete' post.id %}" class="shine-button">Удалить</a>
+        {% endif %}
     {% endblock %}
-</main>

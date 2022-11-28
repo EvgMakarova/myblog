@@ -1,16 +1,15 @@
 {% extends 'blog/layout_post.html' %}
-{% block title %}{{name}}{% endblock %}
+{% block title %}Удаление статьи{% endblock %}
 <main>
     {% block content %}
     <form class="decor" method="post">
         {% csrf_token %}
         <div class="form-inner">
-            <h3>{{name}}</h3>
+            <h3>Удаление статьи</h3>
             {{form}}
         </div>
         <div align="center">
-            <input type="reset" value="Сбросить" class="shine-button">
-            <input type="submit" value="Опубликовать" class="shine-button">
+            <input type="submit" value="Удалить" class="shine-button">
         </div>
     </form>
     {% endblock %}

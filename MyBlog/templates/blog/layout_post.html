@@ -18,13 +18,13 @@
 			    <li><a href="/admin">Админ панель</a></li>   
 			</ul>
 		</div>
-		<div id="main">
+		<div id="main_2">
 			<div id="content" class="left">
                 {% block content %}
                 {% endblock %}
 				<div class="cl">&nbsp;</div>
 			</div>
-			<a href="" class="shine-button">Назад</a>
+			<a href="{% url 'home' %}" class="shine-button">Назад</a>
 		</div>
 	<div id="footer">
 		<p class="copy right">Copyright &copy;  2022 </p>
